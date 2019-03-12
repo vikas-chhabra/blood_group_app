@@ -46,7 +46,6 @@ class ListDonors extends Component {
             this.setState({
                 activityIndicator:false
             })
-            console.log(res)
             if(res.success===true){
                 this.setState({listOfAllBloodBanks:res.filteredBloodBanks})
             }

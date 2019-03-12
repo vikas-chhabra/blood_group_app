@@ -8,6 +8,7 @@ import DetailView from './components/detailView/DetailView';
 import DetailViewBloodBank from './components/detailViewBloodBank/DetailViewBloodBank';
 import {Container, Content, Header, Body}from 'native-base'
 import {Image, StatusBar} from 'react-native';
+import UsersAvailable from './components/usersAvailable/UsersAvailable';
 
 export default class App extends React.Component {
 
@@ -41,6 +42,9 @@ const MyDrawerNavigator = createDrawerNavigator({
   },
   "Blood Banks":{
     screen: BloodBank
+  },
+  "Users Available":{
+    screen:UsersAvailable
   }
 },{
   initialRouteName:'Home',

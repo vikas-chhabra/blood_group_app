@@ -46,9 +46,6 @@ class Main extends Component {
         this.setState({ fontLoaded: true });
         this.getBloodStatDetails()
     }
-    componentWillUnmount() {
-        this.backHandler.remove();
-      }
     logOut=async(e)=>{
         Alert.alert(
             'Logout!!',

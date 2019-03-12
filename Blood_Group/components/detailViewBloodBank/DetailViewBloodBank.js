@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { View, Text, StatusBar, Linking, Dimensions } from 'react-native';
 import { Container, Header, Left, Body, Right, Title, Subtitle, Content, Button, Icon, Card, CardItem, } from 'native-base';
 import { Font } from 'expo';
+
+const { width: WIDTH } = Dimensions.get('window');
 
 export default class DetailView extends Component {
     constructor(props) {
         super(props);
         this.state = {
             fontLoaded: false,
-            details:{
+            details: {
                 "name": 'Loading...',
                 "contactNo": "",
                 "country": '',
@@ -18,6 +20,9 @@ export default class DetailView extends Component {
             }
         }
     }
+    handleLocation = (e) => {
+        Linking.openURL('http://maps.google.com/maps?daddr=' + this.state.details.address);
+    }
     render() {
         if (this.state.fontLoaded === true)
             return (
@@ -26,7 +31,7 @@ export default class DetailView extends Component {
                     <Header style={{ backgroundColor: '#8E0E00' }} androidStatusBarColor="#8E0E00">
                         <Left >
                             <Button transparent>
-                                <Icon name='arrow-back' onPress={(e)=>{this.props.navigation.goBack()}}/>
+                                <Icon name='arrow-back' onPress={(e) => { this.props.navigation.goBack() }} />
                             </Button>
                         </Left>
                         <Body>
@@ -63,6 +68,9 @@ export default class DetailView extends Component {
                                 </Body>
                             </CardItem>
                         </Card>
+                        <Button onPress={(e) => { this.handleLocation(e) }} large style={{ width: WIDTH, justifyContent: 'center', alignItems: 'center', }} info>
+                            <Text>Get Directions</Text>
+                        </Button>
                     </Content>
                 </Container>
             );
@@ -78,7 +86,7 @@ export default class DetailView extends Component {
         });
         this.setState({ fontLoaded: true });
         this.setState({
-            details:this.props.navigation.state.params.value
+            details: this.props.navigation.state.params.value
         })
     }
 }

@@ -127,20 +127,6 @@ class LoginView extends Component{
             <ImageBackground source={require('../../assets/city.jpg')} style={{ flex:1, alignItems:'center' }}>
                 <StatusBar backgroundColor="#DD2476" barStyle="light-content" />
                 <View style={{ flex:1, width: WIDTH/1.2, alignItems:'center', justifyContent:'center',}}>
-                    {/* <LinearGradient colors={['#FF512F', '#DD2476']} style={{ flex:1, height:HEIGHT/6, width:WIDTH/1.4, zIndex:1, position:'absolute', top:HEIGHT/6, borderRadius:8, alignItems:'center', justifyContent:'center', shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 1,}}>
-                        <View style={{flex:1,}}>
-                            <View style={{flex:1}}>
-                                <Text style={{fontSize:25, color:'#fff', padding:20, fontWeight:'bold'}}>
-                                    Log in
-                                </Text>
-                            </View>
-                            <View style={{flex:1, flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-                                <FontAwesome name="facebook-square" style={{fontSize:26, color:'#fff', padding:2}}/>
-                                <FontAwesome name="twitter" style={{fontSize:26, color:'#fff', padding:2}}/>
-                                <FontAwesome name="google-plus" style={{fontSize:26, color:'#fff', padding:2}}/>
-                            </View>
-                        </View>
-                    </LinearGradient> */}
                     <LinearGradient colors={['#FF512F', '#DD2476']} style={{height:HEIGHT/6, width:WIDTH/1.4,zIndex:1, elevation:2, top:-HEIGHT/4,borderRadius:8, alignItems:'center', justifyContent:'center' }}>
                     <View style={{flex:1,}}>
                             <View style={{flex:1}}>
