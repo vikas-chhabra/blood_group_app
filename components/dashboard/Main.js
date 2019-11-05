@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'flex-start',
         backgroundColor: 'transparent',
-        top: 110,
+        top: 140,
         marginBottom: 110,
         width: WIDTH,
         flexDirection: 'column',

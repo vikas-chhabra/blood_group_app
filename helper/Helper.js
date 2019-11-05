@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 import {Alert} from 'react-native';
 
-const baseUrl='https://bg-test-api.herokuapp.com/api/'
+const baseUrl='http://bloodbankapi.herokuapp.com/api/'
 const Helper=(url,method,body)=>{
     return(
         fetch(baseUrl+url,{
